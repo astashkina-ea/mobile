@@ -28,7 +28,7 @@ public class AndroidTests extends TestBase {
 
     @Tag("android")
     @Test
-    @DisplayName("Open article from Search")
+    @DisplayName("Open article from search")
     void openArticleFromSearchTest() {
         step("Type search", () -> {
             $(AppiumBy.accessibilityId("Search Wikipedia")).click();

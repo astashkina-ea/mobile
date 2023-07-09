@@ -14,7 +14,7 @@ public class IosTests extends TestBase{
 
     @Tag("ios")
     @Test
-    @DisplayName("Mobile wiki page search test")
+    @DisplayName("Authorization test")
     void loginTest() {
         step("Click button", () -> {
             $(AppiumBy.id("Text Button")).click();
