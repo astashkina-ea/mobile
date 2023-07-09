@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${device}.properties"
+        "classpath:${deviceHost}.properties"
 })
 
 public interface MobileConfig extends Config {
@@ -18,4 +18,12 @@ public interface MobileConfig extends Config {
     @Key("platformVersion")
     @DefaultValue("13.0")
     String getPlatformVersion();
+
+    @Key("appPackage")
+    @DefaultValue("org.wikipedia.alpha")
+    String getAppPackage();
+
+    @Key("appActivity")
+    @DefaultValue("org.wikipedia.main.MainActivity")
+    String getAppActivity();
 }

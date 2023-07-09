@@ -37,7 +37,8 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            "org.aeonbits.owner:owner:1.0.4"
+            "org.aeonbits.owner:owner:1.0.4",
+            "commons-io:commons-io:2.11.0"
     )
 }
 
@@ -65,5 +66,11 @@ task ios(type: Test) {
 task android(type: Test) {
     useJUnitPlatform{
         includeTags("android")
+    }
+}
+
+task android_local(type: Test) {
+    useJUnitPlatform{
+        includeTags("android_local")
     }
 }
